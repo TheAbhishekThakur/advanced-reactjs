@@ -4,17 +4,20 @@ import { useEffect, useState } from "react";
 const useOnline = () => {
   const [online, setOnline] = useState(false);
 
+  const updateOnlineTrue = () => {
+    setOnline(true);
+  };
+  const updateOnlineFalse = () => {
+    setOnline(false);
+  };
+
   useEffect(() => {
-    window.addEventListener("online", () => {
-      setOnline(true);
-    });
-    window.addEventListener("offline", () => {
-      setOnline(false);
-    });
+    window.addEventListener("online", updateOnlineTrue);
+    window.addEventListener("offline", updateOnlineFalse);
 
     return () => {
-      window.removeEventListener("online", () => {});
-      window.removeEventListener("offline", () => {});
+      window.removeEventListener("online", updateOnlineTrue);
+      window.removeEventListener("offline", updateOnlineFalse);
     };
   }, []);
 
