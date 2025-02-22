@@ -1,42 +1,22 @@
 "use client";
-const useLocalStorage = (key) => {
-  const setItem = (value) => {
-    try {
-      window.localStorage.setItem(key, JSON.stringify(value));
-    } catch (err) {
-      console.error(err);
-    }
-  };
-  const getItem = () => {
-    try {
-      const item = window.localStorage.getItem(key);
-      if (item) {
-        return JSON.parse(item);
-      }
-    } catch (err) {
-      console.error(err);
-    }
-  };
-  const removeItem = () => {
-    try {
-      window.localStorage.removeItem(key);
-    } catch (err) {
-      console.error(err);
-    }
-  };
-  const clearLocalStorage = () => {
-    try {
-      window.localStorage.clear(key);
-    } catch (err) {
-      console.error(err);
-    }
-  };
-  return {
-    setItem,
-    getItem,
-    removeItem,
-    clearLocalStorage,
-  };
+
+export const addItem = (key, value) => {
+  window.localStorage.setItem(key, JSON.stringify(value));
+  return true;
 };
 
-export default useLocalStorage;
+export const getItem = (key) => {
+  const item = window.localStorage.getItem(key);
+  if (item) {
+    return JSON.parse(item);
+  }
+  return undefined;
+};
+export const removeItem = (key) => {
+  window.localStorage.removeItem(key);
+  return true;
+};
+export const clearStorage = () => {
+  window.localStorage.clear();
+  return true;
+};

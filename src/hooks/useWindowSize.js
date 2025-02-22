@@ -8,8 +8,6 @@ const useWindowSize = () => {
   });
 
   const windowSizeHandler = () => {
-    // window.screen.width;
-    // window.screen.height;
     setWindowSize({ width: window.innerWidth, height: window.innerHeight });
   };
 

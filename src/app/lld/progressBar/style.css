@@ -1,0 +1,12 @@
+.main-container {
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 0 20px 10px 20px;
+  overflow: hidden;
+}
+
+.inner-container {
+  background-color: green;
+  text-align: right;
+  transition: 0.5s ease-in;
+}

@@ -1,8 +1,10 @@
 "use client";
 import { useEffect, useState } from "react";
 
-const useOnline = () => {
-  const [online, setOnline] = useState(false);
+const useOnlineStatus = () => {
+  const [online, setOnline] = useState(
+    typeof window !== "undefined" ? navigator.onLine : true
+  );
 
   const updateOnlineTrue = () => {
     setOnline(true);
@@ -24,4 +26,4 @@ const useOnline = () => {
   return online;
 };
 
-export default useOnline;
+export default useOnlineStatus;
