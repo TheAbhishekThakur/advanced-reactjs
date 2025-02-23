@@ -1,4 +1,4 @@
-const Setting = ({ state, setState }) => {
+const Setting = ({ state, setState, errors }) => {
   return (
     <>
       <div>
@@ -27,6 +27,7 @@ const Setting = ({ state, setState }) => {
           Light
         </label>
       </div>
+      {errors.setting && <span className="err-msg">{errors.setting}</span>}
     </>
   );
 };

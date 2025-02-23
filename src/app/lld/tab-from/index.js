@@ -16,19 +16,56 @@ const TabForm = () => {
     interests: [],
     setting: "dark",
   });
+  const [errors, setErrors] = useState({
+    name: "",
+    age: "",
+    email: "",
+    interests: "",
+    stting: "",
+  });
 
   const tabs = [
     {
       name: "Profile",
       component: Profile,
+      validate: () => {
+        if (!state.profile.name) {
+          setErrors({ ...errors, name: "Name is not valid" });
+          return false;
+        } else if (!state.profile.age) {
+          setErrors({ ...errors, age: "Age is not valid" });
+          return false;
+        } else if (!state.profile.email) {
+          setErrors({ ...errors, email: "Email is not valid" });
+          return false;
+        }
+        setErrors({ ...errors, name: "", age: "", email: "" });
+        return true;
+      },
     },
     {
       name: "Interests",
       component: Interests,
+      validate: () => {
+        if (state.interests.length === 0) {
+          setErrors({ ...errors, interests: "Interests is not valid" });
+          return false;
+        }
+        setErrors({ ...errors, interests: "" });
+        return true;
+      },
     },
     {
       name: "Setting",
       component: Setting,
+      validate: () => {
+        if (!state.setting) {
+          setErrors({ ...errors, setting: "Setting is not valid" });
+          return false;
+        }
+        setErrors({ ...errors, setting: "" });
+        return true;
+      },
     },
   ];
 
@@ -36,7 +73,9 @@ const TabForm = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    console.log("state", state);
+    if (tabs[activeTab].validate()) {
+      console.log("state", state);
+    }
   };
 
   return (
@@ -57,13 +96,21 @@ const TabForm = () => {
       </div>
       <div className="body">
         <form onSubmit={onSubmit}>
-          <ActiveTabComponent state={state} setState={setState} />
+          <ActiveTabComponent
+            state={state}
+            setState={setState}
+            errors={errors}
+          />
           <div>
             {activeTab > 0 && (
               <button
                 type="button"
                 className="text-white mt-2 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
-                onClick={() => setActiveTab((prev) => prev - 1)}
+                onClick={() => {
+                  if (tabs[activeTab].validate()) {
+                    setActiveTab((prev) => prev - 1);
+                  }
+                }}
               >
                 Prev
               </button>
@@ -72,7 +119,11 @@ const TabForm = () => {
               <button
                 type="button"
                 className="text-white mt-2 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
-                onClick={() => setActiveTab((prev) => prev + 1)}
+                onClick={() => {
+                  if (tabs[activeTab].validate()) {
+                    setActiveTab((prev) => prev + 1);
+                  }
+                }}
               >
                 Next
               </button>

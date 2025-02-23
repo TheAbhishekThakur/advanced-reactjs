@@ -1,4 +1,4 @@
-const Interests = ({ state, setState }) => {
+const Interests = ({ state, setState, errors }) => {
   const { interests } = state;
 
   const onChangeHandler = (e) => {
@@ -33,6 +33,9 @@ const Interests = ({ state, setState }) => {
           Music
         </label>
       </div>
+      {errors.interests.length === 0 && (
+        <span className="err-msg">{errors.interests}</span>
+      )}
     </>
   );
 };

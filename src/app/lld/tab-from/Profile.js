@@ -1,5 +1,5 @@
 import "./style.css";
-const Profile = ({ state, setState }) => {
+const Profile = ({ state, setState, errors }) => {
   return (
     <div>
       <div>
@@ -15,6 +15,7 @@ const Profile = ({ state, setState }) => {
             });
           }}
         />
+        {errors.name && <span className="err-msg">{errors.name}</span>}
       </div>
       <div>
         <label>Age</label>
@@ -30,6 +31,7 @@ const Profile = ({ state, setState }) => {
             });
           }}
         />
+        {errors.age && <span className="err-msg">{errors.age}</span>}
       </div>
       <div>
         <label>Email</label>
@@ -44,6 +46,7 @@ const Profile = ({ state, setState }) => {
             });
           }}
         />
+        {errors.email && <span className="err-msg">{errors.email}</span>}
       </div>
     </div>
   );
