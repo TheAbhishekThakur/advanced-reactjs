@@ -1,7 +1,7 @@
 import ProgressBar from "./progress-bar";
 import AutoComplete from "./autocomplete";
 import Pagination from "./pagination";
-import TabForm from "./tab-from";
+import TabForm from "./tab-form";
 import FileExplorer from "./file-explorer";
 import OtpInput from "./otp-input";
 
