@@ -1,8 +1,9 @@
-import ProgressBar from "./progressBar";
+import ProgressBar from "./progress-bar";
 import AutoComplete from "./autocomplete";
 import Pagination from "./pagination";
 import TabForm from "./tab-from";
-import FileExplorer from "./fileExplorer";
+import FileExplorer from "./file-explorer";
+import OtpInput from "./otp-input";
 
 const LLD = () => {
   return (
@@ -16,7 +17,8 @@ const LLD = () => {
           {/* <AutoComplete />  */}
           {/* <Pagination /> */}
           {/* <TabForm /> */}
-          <FileExplorer />
+          {/* <FileExplorer /> */}
+          <OtpInput />
         </div>
       </div>
     </>
