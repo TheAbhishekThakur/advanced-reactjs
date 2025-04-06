@@ -4,6 +4,7 @@ import Pagination from "./pagination";
 import TabForm from "./tab-form";
 import FileExplorer from "./file-explorer";
 import OtpInput from "./otp-input";
+import NestedCheckboxes from "./nested-checkboxes";
 
 const LLD = () => {
   return (
@@ -18,7 +19,8 @@ const LLD = () => {
           {/* <Pagination /> */}
           {/* <TabForm /> */}
           {/* <FileExplorer /> */}
-          <OtpInput />
+          {/* <OtpInput /> */}
+          <NestedCheckboxes />
         </div>
       </div>
     </>
