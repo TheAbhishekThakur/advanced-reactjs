@@ -4,7 +4,7 @@ import {
   getItem,
   removeItem,
   clearStorage,
-} from "@/hooks/useLocalStorage";
+} from "@/app/hooks/useLocalStorage";
 
 const LocalStoragePage = () => {
   return (

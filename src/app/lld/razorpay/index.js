@@ -1,5 +1,5 @@
 "use client";
-import { useRazorpay, RazorpayOrderOptions } from "react-razorpay";
+import { useRazorpay } from "react-razorpay";
 
 const Payment = () => {
   const { error, isLoading, Razorpay } = useRazorpay();

@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import usePrevious from "../../hooks/usePrevious";
+import usePrevious from "../hooks/usePrevious";
 
 const TestUsePrevious = () => {
   const [count, setCount] = useState(0);

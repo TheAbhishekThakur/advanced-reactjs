@@ -1,5 +1,5 @@
 "use client";
-import useWindowSize from "../../hooks/useWindowSize";
+import useWindowSize from "../hooks/useWindowSize";
 
 const TestUseWindowSize = () => {
   const { width, height } = useWindowSize();

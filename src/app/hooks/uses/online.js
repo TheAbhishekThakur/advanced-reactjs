@@ -1,5 +1,5 @@
 "use client";
-import useOnlineStatus from "../../hooks/useOnlineStatus";
+import useOnlineStatus from "../hooks/useOnlineStatus";
 
 const TestUseOnline = () => {
   const online = useOnlineStatus();
