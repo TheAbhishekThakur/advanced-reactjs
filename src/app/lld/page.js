@@ -6,6 +6,7 @@ import FileExplorer from "./file-explorer";
 import OtpInput from "./otp-input";
 import NestedCheckboxes from "./nested-checkboxes";
 import Accordion from "./accordion";
+import Slider from "./slider";
 
 const LLD = () => {
   return (
@@ -22,7 +23,8 @@ const LLD = () => {
           {/* <FileExplorer /> */}
           {/* <OtpInput /> */}
           {/* <NestedCheckboxes /> */}
-          <Accordion />
+          {/* <Accordion /> */}
+          <Slider />
         </div>
       </div>
     </>

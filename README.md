@@ -18,3 +18,4 @@
 - Progress Bar
 - Tab Form
 - Accordion
+- Slider
