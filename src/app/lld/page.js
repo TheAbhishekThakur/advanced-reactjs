@@ -5,6 +5,7 @@ import TabForm from "./tab-form";
 import FileExplorer from "./file-explorer";
 import OtpInput from "./otp-input";
 import NestedCheckboxes from "./nested-checkboxes";
+import Accordion from "./accordion";
 
 const LLD = () => {
   return (
@@ -20,7 +21,8 @@ const LLD = () => {
           {/* <TabForm /> */}
           {/* <FileExplorer /> */}
           {/* <OtpInput /> */}
-          <NestedCheckboxes />
+          {/* <NestedCheckboxes /> */}
+          <Accordion />
         </div>
       </div>
     </>

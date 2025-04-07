@@ -17,3 +17,4 @@
 - Pagination
 - Progress Bar
 - Tab Form
+- Accordion
