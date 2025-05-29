@@ -1,12 +1,14 @@
-import ProgressBar from "./progress-bar";
-import AutoComplete from "./autocomplete";
-import Pagination from "./pagination";
-import TabForm from "./tab-form";
-import FileExplorer from "./file-explorer";
-import OtpInput from "./otp-input";
-import NestedCheckboxes from "./nested-checkboxes";
-import Accordion from "./accordion";
-import Slider from "./slider";
+"use client";
+// import ProgressBar from "./progress-bar";
+// import AutoComplete from "./autocomplete";
+// import Pagination from "./pagination";
+// import TabForm from "./tab-form";
+// import FileExplorer from "./file-explorer";
+// import OtpInput from "./otp-input";
+// import NestedCheckboxes from "./nested-checkboxes";
+// import Accordion from "./accordion";
+// import Slider from "./slider";
+import DynamicForm from "./dynamic-form";
 
 const LLD = () => {
   return (
@@ -24,7 +26,8 @@ const LLD = () => {
           {/* <OtpInput /> */}
           {/* <NestedCheckboxes /> */}
           {/* <Accordion /> */}
-          <Slider />
+          {/* <Slider /> */}
+          <DynamicForm />
         </div>
       </div>
     </>
