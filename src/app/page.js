@@ -5,6 +5,7 @@ export default function Home() {
       <ul>
         <li>Low Level Design</li>
         <li>Custom Hooks</li>
+        <li>React Performance</li>
       </ul>
     </div>
   );
