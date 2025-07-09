@@ -6,6 +6,11 @@ import { Virtuoso } from "react-virtuoso";
 // It demonstrates efficient rendering of large lists in React by only rendering items that are currently visible in the viewport.
 // The list is initialized with 100,000 users, each having a random height and a description.
 
+// Reference: https://virtuoso.dev/
+// Note: Ensure you have the 'react-virtuoso' package installed in your project.
+// Installation: npm install react-virtuoso
+// Usage: Import and use the RenderLargeLists component in your application.
+
 const RenderLargeLists = () => {
   const [data, setData] = useState([]);
 
